@@ -1,4 +1,4 @@
-![Todo UI](/TodoStart/src/assets/todoui.jpg)
+![Todo UI](/src/assets/todoui.jpg)
 
 # TodoStart
 
