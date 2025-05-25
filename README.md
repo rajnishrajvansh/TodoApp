@@ -1,16 +1,76 @@
-<<<<<<< HEAD
-# TodoApp
-=======
-# React + Vite
+![Todo UI](assets/todoui.jpg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TodoStart
 
-Currently, two official plugins are available:
+A simple Todo application built with a focus on clean architecture and intuitive user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add, edit, and delete tasks
+- Mark tasks as completed
+- Filter tasks by status
+- Responsive and user-friendly interface
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 48380ac (Initial commit)
+## Getting Started
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/TodoStart.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd TodoStart
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+
+## Folder Structure
+
+```
+/assets         # Images and static files
+/src            # Application source code
+  /components   # UI components
+  /pages        # Page components
+  /utils        # Utility functions
+```    
+
+## Slack & OpenAI Setup
+
+### Slack Integration
+
+To enable Slack notifications for task updates:
+
+1. Create a Slack App at [Slack API](https://api.slack.com/apps).
+2. Add the necessary permissions (e.g., `chat:write`).
+3. Install the app to your workspace and copy the Bot User OAuth Token.
+4. Set the token in your environment variables:
+    ```bash
+    SLACK_BOT_TOKEN=your-slack-bot-token
+    ```
+5. Configure the webhook or use the Slack SDK in your codebase to send notifications.
+
+### OpenAI Integration
+
+To use OpenAI for smart suggestions or task summaries:
+
+1. Sign up at [OpenAI](https://platform.openai.com/) and obtain your API key.
+2. Add your API key to your environment variables:
+    ```bash
+    OPENAI_API_KEY=your-openai-api-key
+    ```
+3. Use the OpenAI SDK or REST API in your application to access AI features.
+
+## Design & Architecture Decisions
+
+- **Clean Architecture:** The project separates concerns by organizing code into components, pages, and utilities, making it scalable and maintainable.
+- **Component-Based UI:** Reusable React components are used for consistency and easier testing.
+- **State Management:** Local state is managed within components; for larger apps, consider integrating a state management library.
+- **API Integration:** External services like Slack and OpenAI are abstracted into utility modules for easy replacement or extension.
+- **Responsiveness:** The UI is designed to be mobile-friendly and accessible.
+- **Testing:** The structure supports adding unit and integration tests for reliability.
